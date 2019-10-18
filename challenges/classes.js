@@ -35,9 +35,25 @@ Find out the formulas for volume and surface area for cubes and create those met
 Test your work by logging out your volume and surface area.
 */
 
-// class CubeMaker extends CuboidMaker2 {
-//     constructor(attributes) {
-//         super(attributes);
-//     }
+class CubeMaker extends CuboidMaker2 {
+  constructor(attributes) {
+    super(attributes);
+  }
+  cubeVolume() {
+    return Math.pow(this.length, 3);
+  }
+  cubeArea() {
+    return Math.pow(this.length, 2) * 6;
+  }
+}
 
-// }
+//alternatively this could be done with callbacks instead of creating a new object ^^
+
+const cube = new CubeMaker({
+  lenght: 10,
+  length: 10,
+  height: 10
+});
+
+console.log(cube.cubeVolume());
+console.log(cube.cubeArea());
